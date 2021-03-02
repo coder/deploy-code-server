@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Allow user to aupply a start dir, default to /home/coder/project
 START_DIR=${1:-/home/coder/project}
 
