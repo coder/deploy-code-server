@@ -4,9 +4,9 @@
 
 ![code-server and railway.app](../img/code-server-railway.png)
 
-## Step 1: Click to deploy [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https%3A%2F%2Fgithub.com%2Fbpmct%2Fcode-server-railway&envs=PASSWORD%2CGIT_REPO&PASSWORDDesc=Your+password+to+log+in+to+code-server+with&GIT_REPODesc=A+git+repo+to+clone+and+open+in+code-server+%28ex.+https%3A%2F%2Fgithub.com%2Fcdr%2Fdocs.git%29)
+## Step 1: Click to deploy
 
----
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https%3A%2F%2Fgithub.com%2Fbpmct%2Fcode-server-railway&envs=PASSWORD%2CGIT_REPO&PASSWORDDesc=Your+password+to+log+in+to+code-server+with&GIT_REPODesc=A+git+repo+to+clone+and+open+in+code-server+%28ex.+https%3A%2F%2Fgithub.com%2Fcdr%2Fdocs.git%29)
 
 ## Step 2: Configure & launch your environment
 
@@ -18,9 +18,10 @@ You also need to specity a `PASSWORD` and a `GIT_REPO` to clone in your environm
 
 ## Step 3: Modify your environment to add additional tools
 
-![railway repo](../img/railway-connected.png)
-
 1. In Railway, go to `Deployments -> Triggers` to see your source repo.
+
+   <img src="../img/railway-connected.png" alt="Connected git repo" width="400" />
+
 1. Open the source repo in GitHub and edit the `Dockerfile`
 1. Add some custom tools (like NodeJS) and commit to the main branch:
 
