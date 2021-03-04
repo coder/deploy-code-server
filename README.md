@@ -9,3 +9,31 @@ To launch your code-server environment, click the button below and log in with G
 It will ask you to make a new repo to store this image, so you can add additional software to your repo's `Dockerfile` in the future.
 
 ![code-server running inside railway.app](img/code-server-railway.png)
+
+## Persist your filesystem with `rclone`
+
+This image has built-in support for [rclone](https://rclone.org/) so that your files don't get lost when code-server is re-deployed. Here's how you can set it up.
+
+You can do this on any machine, but we recommend using [Google Cloud Shell](https://cloud.google.com/shell) for a consistent environment.
+
+```sh
+# 1. install rclone
+# see https://rclone.org/install/ for other install options
+$ curl https://rclone.org/install.sh | sudo bash
+
+# 2. create a new rclone remote with your favorite storage provider
+$ rclone configure
+
+# 3. Encode your rclone config and copy to your clipboard
+$ cat $(rclone config file | sed -n 2p) | base64 --wrap=0 # Linux
+$ cat $(rclone config file | sed -n 2p) | base64 --b 0 # MacOS
+```
+
+Now, add the following the environment variables in the code-server cloud app:
+
+| Environment Variable | description                                                                                            | default value                             | required |
+| -------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------- | -------- |
+| RCLONE_DATA          | the encoded rclone config you copied in step 3                                                         | n/a                                       | ✅       |
+| RCLONE_REMOTE_NAME   | the name of the remote you added in step 2. check with `$ rclone listremotes`                          | code-server-remote                        |          |
+| RCLONE_SOURCE        | source directory to sync files in the code-server container                                            | the entire home directory: `/home/coder/` |          |
+| RCLONE_DESTINATION   | the path in the remote that rclone syncs to. change this if you have multiple code-server environments | code-server-files                         |          |
