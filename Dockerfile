@@ -1,7 +1,10 @@
 FROM codercom/code-server:latest
 
 # Install rclone (support for remote filesystem)
-RUN sudo apt-get install rclone -y
+RUN sudo apt-get install -y rclone
+
+# Other dev tools would be installed here
+# RUN sudo apt-get install -y
 
 USER coder
 
