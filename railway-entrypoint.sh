@@ -7,15 +7,15 @@ START_DIR=${1:-/home/coder/project}
 [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified"; git clone $GIT_REPO $START_DIR
 
 # add rclone config and start rclone, if supplied
-if [[ -z "${RCLONE_CONFIG}" ]]; then
-    echo "RCLONE_CONFIG is not specified. Files will not persist"
+if [[ -z "${RCLONE_DATA}" ]]; then
+    echo "RCLONE_DATA is not specified. Files will not persist"
 else
     echo "Copying rclone config..."
     mkdir -p /home/coder/.config/rclone/
     touch /home/coder/.config/rclone/rclone.conf
-    # echo $RCLONE_CONFIG | base64 -d > /home/coder/.config/rclone/rclone.conf
+    echo $RCLONE_DATA | base64 -d > /home/coder/.config/rclone/rclone.conf
 
-    # serve remotee files on the first item in the rclone config
+    # serve remote files on the first item in the rclone config
     # rclone serve sftp code-server-files:/home/coder/ --no-auth --vfs-cache-mode full&
 fi
 
