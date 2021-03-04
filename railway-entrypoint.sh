@@ -18,7 +18,7 @@ else
     echo "Syncing files..."
 
     touch /home/coder/sync_remote.sh && chmod +x /home/coder/sync_remote.sh
-    echo "rclone sync ${RCLONE_SOURCE:-"/home/coder/"} ${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files}" > /home/coder/sync_remote.sh
+    echo "rclone sync ${RCLONE_SOURCE:-"/home/coder/"} ${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files} -vv" > /home/coder/sync_remote.sh
     /home/coder/sync_remote.sh
 fi
 
