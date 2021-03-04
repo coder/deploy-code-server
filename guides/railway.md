@@ -1,6 +1,7 @@
 # Guide: Launching `code-server` on railway.app
 
 [Railway](https://railway.app) is a new cloud development platform! ☁️
+
 Use Railway + code-server to get a dev environment that you can access from any device.
 
 ![code-server and railway.app](../img/code-server-railway.png)

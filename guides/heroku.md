@@ -1,6 +1,7 @@
 # Guide: Launching `code-server` on Heroku
 
 Heroku is a managed app hosting platform.
+
 Launch code-server on Heroku to get on-demand dev environments that turn off when you don't need them! 💵
 
 ![code-server and Heroku](../img/heroku-app-create.png)
