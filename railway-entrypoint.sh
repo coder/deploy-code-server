@@ -13,7 +13,7 @@ else
     echo "Copying rclone config..."
     mkdir -p /home/coder/.config/rclone/
     touch /home/coder/.config/rclone/rclone.conf
-    echo $RCLONE_CONFIG | base64 -d > /home/coder/.config/rclone/rclone.conf
+    # echo $RCLONE_CONFIG | base64 -d > /home/coder/.config/rclone/rclone.conf
 
     # serve remotee files on the first item in the rclone config
     # rclone serve sftp code-server-files:/home/coder/ --no-auth --vfs-cache-mode full&
