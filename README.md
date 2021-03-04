@@ -14,7 +14,7 @@ It will ask you to make a new repo to store this image, so you can add additiona
 
 This image has built-in support for [rclone](https://rclone.org/) so that your files don't get lost when code-server is re-deployed.
 
-You can do this on any machine, but it works great on the code-server environment itself, or Google Cloud Shell :)
+You can generate the rclone config on any machine, but it works great on the code-server environment itself, or Google Cloud Shell :)
 
 ```sh
 # 1. install rclone
