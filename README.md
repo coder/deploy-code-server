@@ -42,4 +42,5 @@ Now, you can add the following the environment variables in the code-server clou
 
 ## Todo:
 
+- [ ] Add support for SSH / VS Code remote access
 - [ ] Make rclone logs visible in environment for debugging
