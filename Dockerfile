@@ -21,8 +21,8 @@ RUN curl https://rclone.org/install.sh | sudo bash
 # Fix permissions
 RUN sudo chown -R coder:coder /home/coder/.local
 
-# Port for railway
-ENV export PORT=80
+# Port
+ENV PORT=8080
 
 # Use our custom entrypoint script first
 COPY railway-entrypoint.sh /usr/bin/railway-entrypoint.sh
