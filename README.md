@@ -12,9 +12,9 @@ It will ask you to make a new repo to store this image, so you can add additiona
 
 ## Persist your filesystem with `rclone`
 
-This image has built-in support for [rclone](https://rclone.org/) so that your files don't get lost when code-server is re-deployed. Here's how you can set it up.
+This image has built-in support for [rclone](https://rclone.org/) so that your files don't get lost when code-server is re-deployed.
 
-You can do this on any machine, but we recommend using [Google Cloud Shell](https://cloud.google.com/shell) for a consistent environment.
+You can do this on any machine, but it works great on the code-server environment itself, or Google Cloud Shell :)
 
 ```sh
 # 1. install rclone
@@ -22,7 +22,7 @@ You can do this on any machine, but we recommend using [Google Cloud Shell](http
 $ curl https://rclone.org/install.sh | sudo bash
 
 # 2. create a new rclone remote with your favorite storage provider
-$ rclone configure
+$ rclone config
 
 # 3. Encode your rclone config and copy to your clipboard
 $ cat $(rclone config file | sed -n 2p) | base64 --wrap=0 # Linux
