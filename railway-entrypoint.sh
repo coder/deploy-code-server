@@ -15,7 +15,7 @@ else
     echo $RCLONE_CONFIG | base64 -d > /home/coder/.config/rclone/rclone.conf
 
     # serve remote files on the first item in the rclone config
-    rclone serve sftp code-server-files:/home/coder/ --no-auth --vfs-cache-mode full&
+    # rclone serve sftp code-server-files:/home/coder/ --no-auth --vfs-cache-mode full&
 fi
 
 # Now we can run code-server with the default entrypoint
