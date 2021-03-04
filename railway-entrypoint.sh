@@ -19,7 +19,7 @@ else
 
     touch /home/coder/sync_remote.sh && chmod +x /home/coder/sync_remote.sh
     echo "rclone sync ${RCLONE_SOURCE:-"/home/coder/"} ${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files} -vv" > /home/coder/sync_remote.sh
-    /home/coder/sync_remote.sh
+    /home/coder/sync_remote.sh&
 fi
 
 # Now we can run code-server with the default entrypoint
