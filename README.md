@@ -2,14 +2,14 @@
 
 A collection of one-click buttons and scripts for deploying code-server to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
 
-| Platform                                                               | Type             | Cheapest Plan                         | Deploy                                                   |
-| ---------------------------------------------------------------------- | ---------------- | ------------------------------------- | -------------------------------------------------------- |
-| [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com) | VM               | $5/mo, 1 CPU, 1 GB RAM                | [see guide](guides/digitalocean.md)                      |
-| Vultr                                                                  | VM               | $5/mo, 1 CPU, 1 GB RAM                | coming soon                                              |
-| Linode                                                                 | VM               | $3.50/mo, 1 CPU, 512 MB RAM           | [see guide](guides/linode.md)                            |
-| Railway                                                                | Deploy Container | Free, specs unknown, but very fast 🚀 | [see guide](guides/railway.md)                           |
-| Heroku                                                                 | Deploy Container | Free, 1 CPU, 512 MB RAM               | [see guide](guides/heroku.md)                            |
-| Azure App Service                                                      | Deploy Container | Free, 1 CPU, 1 GB RAM                 | [see guide](https://github.com/bencdr/code-server-azure) |
+|                                                                                                                 | Name              |                  | Type                                  | Cheapest Plan                                            | Deploy | --  |
+| --------------------------------------------------------------------------------------------------------------- | ----------------- | ---------------- | ------------------------------------- | -------------------------------------------------------- | ------ | --- |
+| [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com)                                          | DigitalOcean      | VM               | $5/mo, 1 CPU, 1 GB RAM                | [see guide](guides/digitalocean.md)                      |
+| [![Vultr](img/logo/vultr.png)](https://vultr.com)                                                               | Vultr             | VM               | $5/mo, 1 CPU, 1 GB RAM                | coming soon                                              |
+| [![Linode](img/logo/linode.png)](https://linode.com)                                                            | Linode            | VM               | $3.50/mo, 1 CPU, 512 MB RAM           | [see guide](guides/linode.md)                            |
+| [![Railway](img/logo/railway.png)](https://railway.aop)                                                         | Railway           | Deploy Container | Free, specs unknown, but very fast 🚀 | [see guide](guides/railway.md)                           |
+| [![Heroku](img/logo/heroku.png)](https://heroku.com)                                                            | Heroku            | Deploy Container | Free, 1 CPU, 512 MB RAM               | [see guide](guides/heroku.md)                            |
+| [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Deploy Container | Free, 1 CPU, 1 GB RAM                 | [see guide](https://github.com/bencdr/code-server-azure) |
 
 ---
 
