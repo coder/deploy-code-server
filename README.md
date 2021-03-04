@@ -52,5 +52,6 @@ $ sh /home/coder/pull-remote.sh # get latest files from the remote
 ## Todo:
 
 - [ ] Impliment file watcher or auto file sync in VS Code
+- [ ] Attach a "push" on a git stash??
 - [ ] Add support for SSH / VS Code remote access
 - [ ] Make rclone logs visible in environment for debugging
