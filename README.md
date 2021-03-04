@@ -29,7 +29,7 @@ $ cat $(rclone config file | sed -n 2p) | base64 --wrap=0 # Linux
 $ cat $(rclone config file | sed -n 2p) | base64 --b 0 # MacOS
 ```
 
-Now, you canadd the following the environment variables in the code-server cloud app:
+Now, you can add the following the environment variables in the code-server cloud app:
 
 | Environment Variable | Description                                                                                                                                           | Default Value                             | Required |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------- |
