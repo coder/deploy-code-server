@@ -34,7 +34,7 @@ Now, you canadd the following the environment variables in the code-server cloud
 | Environment Variable | Description                                                                                                                                           | Default Value                             | Required |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------- |
 | RCLONE_DATA          | the encoded rclone config you copied in step 3                                                                                                        | n/a                                       | ✅       |
-| RCLONE_REMOTE_NAME   | the name of the remote you added in step 2. check with `$ rclone listremotes`                                                                         | code-server-remote                        |          |
+| RCLONE_REMOTE_NAME   | the name of the remote you added in step 2.<br />check with `$ rclone listremotes`                                                                    | code-server-remote                        |          |
 | RCLONE_SOURCE        | source directory to sync files in the code-server container                                                                                           | the entire home directory: `/home/coder/` |          |
 | RCLONE_DESTINATION   | the path in the remote that rclone syncs to. change this if you have multiple code-server environments, or if you want to better organize your files. | code-server-files                         |          |
 
