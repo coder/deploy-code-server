@@ -19,7 +19,7 @@ A collection of one-click buttons and scripts for deploying code-server to vario
   - You need to save "snapshots" to use your latest images
   - Storage is always persistent, and you can usually add extra volumes
   - VMs can support many workloads, such as running Docker or Kubernetes clusters
-  - [👀 Preview the VM install script](vm-script/)
+  - [👀 Docs for the VM install script](vm-script/)
 - App Platforms deploy code-server containers, and are often rebuilt
   - App platforms can shut down when you are not using it, saving you money
   - All software and dependencies need to be defined in the `Dockerfile` or install script so they aren't destroyed on a rebuild
