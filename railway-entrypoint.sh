@@ -21,6 +21,7 @@ else
     RCLONE_SOURCE_PATH=${RCLONE_SOURCE:-$START_DIR}
     echo "rclone sync $RCLONE_SOURCE_PATH $RCLONE_REMOTE_PATH -vv" > /home/coder/push_remote.sh
     echo "rclone sync $RCLONE_REMOTE_PATH $RCLONE_SOURCE_PATH -vv" > /home/coder/pull_remote.sh
+    chmod +x push_remote.sh pull_remote.sh
 
     if rclone ls $RCLONE_REMOTE_PATH | grep -q 'directory not found'; then
         # we need to clone the git repo and sync
