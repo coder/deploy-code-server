@@ -1,0 +1,24 @@
+{
+  "name": "code-server-heroku",
+  "description": "A code-server environment designed to run in your Heroku",
+  "repository": "https://github.com/bpmct/deploy-code-server",
+  "logo": "https://avatars.githubusercontent.com/u/22407953?s=460&u=32797cfb0541bebfcf10a4613f56a65acd9f516d&v=4",
+  "keywords": [
+    "node",
+    "express",
+    "code-server",
+    "cloud-development",
+    "heroku-api"
+  ],
+  "env": {
+    "GIT_REPO": {
+      "description": "URL of a git repo to clone (optional)",
+      "required": false
+    },
+    "PASSWORD": {
+      "description": "Create a password to log in to code-server with",
+      "required": true
+    }
+  },
+  "stack": "container"
+}
