@@ -1,6 +1,7 @@
 # Guide: Launching `code-server` on Heroku
 
-Heroku is a managed app hosting platform. Launch code-server on Heroku to get on-demand dev environments that turn off when you don't need them! 💵
+Heroku is a managed app hosting platform.
+Launch code-server on Heroku to get on-demand dev environments that turn off when you don't need them! 💵
 
 ![code-server and Heroku](../img/heroku-app-create.png)
 
@@ -13,7 +14,9 @@ Heroku is a managed app hosting platform. Launch code-server on Heroku to get on
 ## Step 2: Configure & deploy your environment
 
 `App name`: The URL and you can access code-server with
+
 `PASSWORD`: A password you can use to log in
+
 `GIT_REPO`: The HTTPS URL of a git repo you'd like to use in code-server. (optional)
 
 After it has built, you can access it by pressing "View" or "Open app."
@@ -21,6 +24,8 @@ After it has built, you can access it by pressing "View" or "Open app."
 ## Step 3: Create a new GitHub repo with this template
 
 <img src="../img/modify-github-template.png" alt="Modify GitHub template" width="600" />
+
+Press the button in the top right of the repo, or or click to [use this template](https://github.com/bpmct/deploy-code-server/generate).
 
 ## Step 4: Set up automatic builds with this repo
 
