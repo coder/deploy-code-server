@@ -10,7 +10,7 @@ It will ask you to make a new repo to store this image, so you can add additiona
 
 ![code-server running inside railway.app](img/code-server-railway.png)
 
-## Persist your filesystem with `rclone`
+## 💾 Persist your filesystem with `rclone`
 
 This image has built-in support for [rclone](https://rclone.org/) so that your files don't get lost when code-server is re-deployed.
 
