@@ -3,23 +3,36 @@
 # Allow user to aupply a start dir, default to /home/coder/project
 START_DIR=${1:-/home/coder/project}
 
-# Clone the git repo, if it exists
-[ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified"; git clone $GIT_REPO $START_DIR
-
 # add rclone config and start rclone, if supplied
 if [[ -z "${RCLONE_DATA}" ]]; then
     echo "RCLONE_DATA is not specified. Files will not persist"
+
+    # Clone the git repo, if it exists
+    [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified"; git clone $GIT_REPO $START_DIR
+
 else
     echo "Copying rclone config..."
     mkdir -p /home/coder/.config/rclone/
     touch /home/coder/.config/rclone/rclone.conf
     echo $RCLONE_DATA | base64 -d > /home/coder/.config/rclone/rclone.conf
 
-    echo "Syncing files..."
+    # Full path to the remote filesystem
+    RCLONE_REMOTE_PATH=${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files}
+    RCLONE_SOURCE_PATH=${RCLONE_SOURCE:-$START_DIR}
+    echo "rclone sync $RCLONE_SOURCE_PATH $RCLONE_REMOTE_PATH -vv" > /home/coder/push_remote.sh
+    echo "rclone sync $RCLONE_REMOTE_PATH $RCLONE_SOURCE_PATH -vv" > /home/coder/pull_remote.sh
 
-    touch /home/coder/sync_remote.sh && chmod +x /home/coder/sync_remote.sh
-    echo "rclone sync ${RCLONE_SOURCE:-"/home/coder/"} ${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files} -vv" > /home/coder/sync_remote.sh
-    /home/coder/sync_remote.sh&
+    if rclone ls $RCLONE_REMOTE_PATH | grep -q 'directory not found'; then
+        # we need to clone the git repo and sync
+        echo "Pushing initial files to remote..."
+        [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" && mkdir -p $START_DIR && echo "intial file" > $START_DIR/file.txt; git clone $GIT_REPO $START_DIR
+        /home/coder/push_remote.sh&
+    else
+        echo "Pulling files from remote..."
+        # grab the files from the remote instead
+        /home/coder/pull_remote.sh&
+    fi
+
 fi
 
 # Now we can run code-server with the default entrypoint
