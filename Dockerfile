@@ -8,7 +8,8 @@ COPY settings.json .local/share/code-server/User/settings.json
 # Use bash shell
 ENV SHELL=/bin/bash
 
-# Install rclone (support for remote filesystem)
+# Install unzip + rclone (support for remote filesystem)
+RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | sudo bash
 
 # Fix permissions
