@@ -23,15 +23,15 @@ else
     echo "rclone sync $RCLONE_REMOTE_PATH $RCLONE_SOURCE_PATH -vv" > /home/coder/pull_remote.sh
     chmod +x push_remote.sh pull_remote.sh
 
-    if rclone ls $RCLONE_REMOTE_PATH | grep -q 'directory not found'; then
+    if rclone ls $RCLONE_REMOTE_PATH; then
+        # grab the files from the remote instead
+        echo "Pulling existing files from remote..."
+        /home/coder/pull_remote.sh&
+    else
         # we need to clone the git repo and sync
         echo "Pushing initial files to remote..."
         [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" && mkdir -p $START_DIR && echo "intial file" > $START_DIR/file.txt; git clone $GIT_REPO $START_DIR
         /home/coder/push_remote.sh&
-    else
-        echo "Pulling files from remote..."
-        # grab the files from the remote instead
-        /home/coder/pull_remote.sh&
     fi
 
 fi
