@@ -1,27 +1,32 @@
-# Guide: Launching code-server on Heroku
+# Guide: Launching `code-server` on Heroku
 
-![code-server and railway.app](../img/code-server-railway.png)
+Heroku is a managed app hosting platform. Launch code-server on Heroku to get on-demand dev environments that turn off when you don't need them! 💵
 
-[Railway](https://railway.app) is a new cloud development platform! ☁️ Use Railway + code-server to get a dev environment that you can access from any device.
+![code-server and Heroku](../img/heroku-app-create.png)
 
-## Step 1: Click to deploy [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https%3A%2F%2Fgithub.com%2Fbpmct%2Fcode-server-railway&envs=PASSWORD%2CGIT_REPO&PASSWORDDesc=Your+password+to+log+in+to+code-server+with&GIT_REPODesc=A+git+repo+to+clone+and+open+in+code-server+%28ex.+https%3A%2F%2Fgithub.com%2Fcdr%2Fdocs.git%29)
+## Step 1: Click to deploy
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/bpmct/code-server-heroku/tree/main)
 
 ---
 
-## Step 2: Configure & launch your environment
+## Step 2: Configure & deploy your environment
 
-![railway launch environment screen](../img/launch-railway.gif)
+`App name`: The URL and you can access code-server with
+`PASSWORD`: A password you can use to log in
+`GIT_REPO`: The HTTPS URL of a git repo you'd like to use in code-server. (optional)
 
-You'll need to make a new repository which will contain your code-server configuration. If you push changes to this repo (to install NodeJS, for example), it will re-deploy code-server.
+After it has built, you can access it by pressing "View" or "Open app."
 
-You also need to specity a `PASSWORD` and a `GIT_REPO` to clone in your environment :)
+## Step 3: Create a new GitHub repo with this template
 
-## Step 3: Modify your environment to add additional tools
+<img src="../img/modify-github-template.png" alt="Modify GitHub template" width="600" />
 
-![railway repo](../img/railway-connected.png)
+## Step 4: Set up automatic builds with this repo
 
-1. In Railway, go to `Deployments -> Triggers` to see your source repo.
-1. Open the source repo in GitHub and edit the `Dockerfile`
+1. In Heroku, navigate to `Deploy -> Deployment Method"
+1. Link it with the GitHub repo you just created.
+1. Open the repo in GitHub and edit the `Dockerfile`
 1. Add some custom tools (like NodeJS) and commit to the main branch:
 
    ```Dockerfile
@@ -36,6 +41,6 @@ You also need to specity a `PASSWORD` and a `GIT_REPO` to clone in your environm
    RUN sudo apt-get install -y nodejs
    ```
 
-1. Head back to Railway and notice a new deployment was created. After it has completed, you can use these tools in your environment.
+1. Head back to Heroku and notice a new deployment has started. After it has completed, you can use these tools in your environment.
 
 1. (Optional): [Configure rclone](https://github.com/bpmct/deploy-code-server/tree/main/deploy-container#-persist-your-filesystem-with-rclone) so that you can save your VS Code config and files without commiting
