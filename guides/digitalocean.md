@@ -1,6 +1,8 @@
 # deploying `code-server` on Linode
 
-[DigitalOcean](https://digitalocean.com) is an developer-friendly platform with cloud servers. Here is the easiest way to launch code-server on Linode.
+[DigitalOcean](https://digitalocean.com) is an developer-friendly platform with cloud servers. Here is the easiest way to launch code-server on Linode:
+
+---
 
 1. Log into DigitalOcean and create a new Ubuntu 20.10 droplet with any size, in any region
 1. Under "Select additional options," check `User data`. This will allow you to specify a script that will run on first boot.
