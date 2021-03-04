@@ -18,7 +18,7 @@ RUN curl https://rclone.org/install.sh | sudo bash
 # RUN sudo apt-get install -y build-essential
 # RUN COPY myTool /home/coder/myTool
 
-# Fix permissions
+# Fix permissions for code-server
 RUN sudo chown -R coder:coder /home/coder/.local
 
 # Port
