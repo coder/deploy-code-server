@@ -21,7 +21,7 @@ You can do this on any machine, but it works great on the code-server environmen
 # see https://rclone.org/install/ for other install options
 $ curl https://rclone.org/install.sh | sudo bash
 
-# 2. create a new rclone remote with your favorite storage provider
+# 2. create a new rclone remote with your favorite storage provider ☁️
 $ rclone config
 
 # 3. Encode your rclone config and copy to your clipboard
