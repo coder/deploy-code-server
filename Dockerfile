@@ -1,5 +1,8 @@
 FROM codercom/code-server:latest
 
+# Install rclone (support for remote filesystem)
+RUN sudo apt-get install rclone -y
+
 USER coder
 
 # Apply VS Code settings
@@ -13,9 +16,6 @@ RUN sudo chown -R coder:coder /home/coder/.local
 
 # Port for railway
 ENV export PORT=80
-
-# Install rclone (support for remote filesystem)
-RUN apt-get install rclone -y
 
 # Use our custom entrypoint script first
 COPY railway-entrypoint.sh /usr/bin/railway-entrypoint.sh
