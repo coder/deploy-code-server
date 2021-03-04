@@ -1,11 +1,5 @@
 FROM codercom/code-server:latest
 
-# Install rclone (support for remote filesystem)
-RUN sudo apt-get update && sudo apt-get install -y rclone
-
-# Other dev tools would be installed here
-# RUN sudo apt-get install -y
-
 USER coder
 
 # Apply VS Code settings
@@ -13,6 +7,9 @@ COPY settings.json .local/share/code-server/User/settings.json
 
 # Use bash shell
 ENV SHELL=/bin/bash
+
+# Install rclone (support for remote filesystem)
+RUN curl https://rclone.org/install.sh | sudo bash
 
 # Fix permissions
 RUN sudo chown -R coder:coder /home/coder/.local
