@@ -10,6 +10,8 @@ To launch your code-server environment, click the button below and log in with G
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | For Railway, it will ask you to make a new repo to store this image, so you can add additional software to your repo's `Dockerfile` in the future.                                                                                                                                                                                             | For Heroku, we recommend [using this repo as a template](https://github.com/bpmct/code-server-railway/generate) and using the one-click deploy on your own repo to further modify your app. |
 
+Docker Hub: this image is live on the Docker Hub at `bencdr/code-server-deploy-container`
+
 ---
 
 ## 💾 Persist your filesystem with `rclone`
