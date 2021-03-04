@@ -6,7 +6,7 @@
 
    <img src="../img/linode-stackscripts-sidebar.png" alt="Linode StackScripts" width="450" />
 
-1. Navigate to "Community Scripts" and use `bencdr/code-server` or create your own based on [../deploy-vm/launch-code-server-linode.sh](launch-code-server-linode.sh).
+1. Navigate to "Community Scripts" and use `bencdr/code-server` or create your own based on [launch-code-server-linode.sh](../deploy-vm/launch-code-server-linode.sh).
 
 1. Give your server a label and deploy with Ubuntu 20.10 and any size. Once your server starts, you can simply navigate to the IP address and get forwarded to a secure version of code-server, which will be proxied behind your GitHub account. For information on how this works, see [code-server --link](https://github.com/cdr/code-server#cloud-program-%EF%B8%8F).
 
