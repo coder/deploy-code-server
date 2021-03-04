@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Allow user to aupply a start dir, default to /home/coder/project
 START_DIR=/home/coder/project
 
 # add rclone config and start rclone, if supplied
@@ -24,7 +23,7 @@ else
     chmod +x push_remote.sh pull_remote.sh
 
     if rclone ls $RCLONE_REMOTE_PATH; then
-        # grab the files from the remote instead
+        # grab the files from the remote instead of re-cloning the git repo
         echo "Pulling existing files from remote..."
         /home/coder/pull_remote.sh&
     else
