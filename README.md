@@ -9,7 +9,3 @@ To launch your code-server environment, click the button below and log in with G
 It will ask you to make a new repo to store this image, so you can add additional software to your repo's `Dockerfile` in the future.
 
 ![code-server running inside railway.app](img/code-server-railway.png)
-
-## Todo:
-
-- [ ] Add ability to persist files with rclone
