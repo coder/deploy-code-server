@@ -42,15 +42,16 @@ Now, you can add the following the environment variables in the code-server clou
 
 # How to use:
 
-$ sh /home/coder/push-remote.sh # save your uncomitted files to the remote
+$ sh /home/coder/push_remote.sh # save your uncomitted files to the remote
 
-$ sh /home/coder/pull-remote.sh # get latest files from the remote
+$ sh /home/coder/pull_remote.sh # get latest files from the remote
 ```
 
 ---
 
 ## Todo:
 
+- [ ] Make `push_remote` and `pull_remote` commands in path
 - [ ] Impliment file watcher or auto file sync in VS Code
 - [ ] Attach a "push" on a git stash??
 - [ ] Add support for SSH / VS Code remote access
