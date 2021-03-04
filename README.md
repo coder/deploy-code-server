@@ -2,7 +2,7 @@
 
 A collection of one-click buttons and scripts for deploying code-server to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
 
-|                                                                                                                 | Name              | Type      | Chestest Plan                         | Deploy                                                   |
+|                                                                                                                 | Name              | Type      | Cheapest Plan                         | Deploy                                                   |
 | --------------------------------------------------------------------------------------------------------------- | ----------------- | --------- | ------------------------------------- | -------------------------------------------------------- |
 | [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com)                                          | DigitalOcean      | VM        | $5/mo, 1 CPU, 1 GB RAM                | [see guide](guides/digitalocean.md)                      |
 | [![Vultr](img/logo/vultr.png)](https://vultr.com)                                                               | Vultr             | VM        | $3.50/mo, 1 CPU, 512 MB RAM           | coming soon                                              |
