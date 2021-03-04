@@ -16,7 +16,7 @@ else
     echo $RCLONE_DATA | base64 -d > /home/coder/.config/rclone/rclone.conf
 
     echo "Syncing files..."
-    rclone sync ${RCLONE_SOURCE:-"/home/coder/"} ${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files} 2>&1 | tee /tmp/rclone-logs.txt
+    rclone sync ${RCLONE_SOURCE:-"/home/coder/"} ${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files}
 fi
 
 # Now we can run code-server with the default entrypoint
