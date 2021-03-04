@@ -29,11 +29,17 @@ $ cat $(rclone config file | sed -n 2p) | base64 --wrap=0 # Linux
 $ cat $(rclone config file | sed -n 2p) | base64 --b 0 # MacOS
 ```
 
-Now, add the following the environment variables in the code-server cloud app:
+Now, you canadd the following the environment variables in the code-server cloud app:
 
-| Environment Variable | description                                                                                            | default value                             | required |
-| -------------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------- | -------- |
-| RCLONE_DATA          | the encoded rclone config you copied in step 3                                                         | n/a                                       | ✅       |
-| RCLONE_REMOTE_NAME   | the name of the remote you added in step 2. check with `$ rclone listremotes`                          | code-server-remote                        |          |
-| RCLONE_SOURCE        | source directory to sync files in the code-server container                                            | the entire home directory: `/home/coder/` |          |
-| RCLONE_DESTINATION   | the path in the remote that rclone syncs to. change this if you have multiple code-server environments | code-server-files                         |          |
+| Environment Variable | Description                                                                                                                                           | Default Value                             | Required |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | -------- |
+| RCLONE_DATA          | the encoded rclone config you copied in step 3                                                                                                        | n/a                                       | ✅       |
+| RCLONE_REMOTE_NAME   | the name of the remote you added in step 2. check with `$ rclone listremotes`                                                                         | code-server-remote                        |          |
+| RCLONE_SOURCE        | source directory to sync files in the code-server container                                                                                           | the entire home directory: `/home/coder/` |          |
+| RCLONE_DESTINATION   | the path in the remote that rclone syncs to. change this if you have multiple code-server environments, or if you want to better organize your files. | code-server-files                         |          |
+
+---
+
+## Todo:
+
+- [ ] Make rclone logs visible in environment for debugging
