@@ -2,7 +2,7 @@
 
 A collection of one-click buttons and scripts for deploying code-server to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
 
-|                                                                                                                 | Name              | Type      | Cheapest Plan                         | Deploy                                                   |
+|                                                                                                                 | Name              | Type      | Lowest-Price Plan                     | Deploy                                                   |
 | --------------------------------------------------------------------------------------------------------------- | ----------------- | --------- | ------------------------------------- | -------------------------------------------------------- |
 | [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com)                                          | DigitalOcean      | VM        | $5/mo, 1 CPU, 1 GB RAM                | [see guide](guides/digitalocean.md)                      |
 | [![Vultr](img/logo/vultr.png)](https://vultr.com)                                                               | Vultr             | VM        | $3.50/mo, 1 CPU, 512 MB RAM           | coming soon                                              |
@@ -10,6 +10,8 @@ A collection of one-click buttons and scripts for deploying code-server to vario
 | [![Railway](img/logo/railway.png)](https://railway.aop)                                                         | Railway           | Container | Free, specs unknown, but very fast 🚀 | [see guide](guides/railway.md)                           |
 | [![Heroku](img/logo/heroku.png)](https://heroku.com)                                                            | Heroku            | Container | Free, 1 CPU, 512 MB RAM               | [see guide](guides/heroku.md)                            |
 | [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Container | Free, 1 CPU, 1 GB RAM                 | [see guide](https://github.com/bencdr/code-server-azure) |
+
+For built-in support deploying and managing dev environments for your team. check out [Coder](https://coder.com/docs).
 
 ---
 
