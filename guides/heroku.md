@@ -1,6 +1,6 @@
 ![code-server and railway.app](../img/code-server-railway.png)
 
-## Guide: Launching code-server on railway.app
+## Guide: Launching code-server on Heroku
 
 [Railway](https://railway.app) is a new cloud development platform! ☁️ Use Railway + code-server to get a dev environment that you can access from any device.
 
