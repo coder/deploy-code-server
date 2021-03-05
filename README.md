@@ -14,7 +14,7 @@ A collection of one-click buttons and scripts for deploying code-server to vario
 
 ---
 
-## Coding on a VM vs. a Container
+## code-server on a VM vs. a Container
 
 - VMs are deployed once, and then can be modified to install new software
   - You need to save "snapshots" to use your latest images
