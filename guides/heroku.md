@@ -49,4 +49,4 @@ Press the button in the top right of the repo, or or click to [use this template
 
 1. Head back to Heroku and notice a new deployment has started. After it has completed, you can use these tools in your environment.
 
-1. (Optional): [Configure rclone](https://github.com/bpmct/deploy-code-server/tree/main/deploy-container#-persist-your-filesystem-with-rclone) so that you can save your VS Code config and files without commiting
+1. (Optional): [Configure rclone](https://github.com/cdr/deploy-code-server/tree/main/deploy-container#-persist-your-filesystem-with-rclone) so that you can save your VS Code config and files without commiting
