@@ -1,7 +1,7 @@
 {
   "name": "code-server-heroku",
   "description": "A code-server environment designed to run in your Heroku",
-  "repository": "https://github.com/bpmct/deploy-code-server",
+  "repository": "https://github.com/cdr/deploy-code-server",
   "logo": "https://avatars.githubusercontent.com/u/1375?s=200&v=4",
   "keywords": [
     "node",
