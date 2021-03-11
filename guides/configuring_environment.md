@@ -4,7 +4,7 @@ If you change the directory and now code-server wont work, or if you are getting
 ```Dockerfile
 # Create starting directory
 # Should be the same as $START_DIR in entrypoint.sh
-RUN mkdir /home/coder/files
+RUN mkdir /home/coder/project
 ```
 ___
 ### Using a config.yaml file for code-server
