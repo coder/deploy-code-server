@@ -78,3 +78,76 @@ If you install after running code-server, you will be able to use code-server bu
 <br>
 
 > NOTE: These extensions are installed User-wide
+___
+### Pushing and pulling with rclone
+While you could always use
+```shell
+# How to use:
+
+$ sh /home/coder/push_remote.sh # save your uncomitted files to the remote
+
+$ sh /home/coder/pull_remote.sh # get latest files from the remote
+```
+from the terminal, it may get repetetive and inconvinient.<br>
+Let's see how we can fix that.<br>
+#### VSCode Tasks
+You can make tasks for pushing and pull with rclone.<br>
+1. Create a tasks.json file in the deploy-container folder with these contents
+```json5
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "push_remote",
+      "type": "shell",
+      "command": "sh /home/coder/push_remote.sh",
+      "presentation": {
+        "reveal": "always",
+      },
+      "problemMatcher": [],
+      "options": {
+        "statusbar": {
+          "label": "$(repo-push) push"
+        }
+      }
+    },
+    {
+      "label": "pull_remote",
+      "type": "shell",
+      "command": "sh /home/coder/pull_remote.sh",
+      "presentation": {
+        "reveal": "always",
+      },
+      "problemMatcher": [],
+      "options": {
+        "statusbar": {
+          "label": "$(repo-pull) pull"
+        }
+      }
+    }
+  ]
+}
+```
+2. Add this command to the Dockerfile
+```Dockerfile
+# Apply VSCode tasks
+COPY deploy-container/tasks.json /home/coder/.local/share/code-server/User/tasks.json
+```
+Once the container gets rebuilt, whenever you launch code-server, there will be 2 User-level tasks available. You can use Ctrl+Shift+P to open the command pallete and type `tasks: run task` press enter, select `push_remote` or `pull_remote` and press enter. A terminal will popup showing the output of the task.<br>
+<br>
+A faster method to run tasks using the command pallete is to backspace the default `>` and type `task`, press space and then the name of the task you want to run.<br>
+<br>
+The best part about tasks is that you can bind keys to them. Take a look [here](https://code.visualstudio.com/docs/editor/tasks#_binding-keyboard-shortcuts-to-tasks).<br>
+If you choose to do so, create your keybindings.json file in the deploy-container directory and then add this command to the Dockerfile
+```Dockerfile
+# Apply VSCode keybindings
+COPY deploy-container/keybindings.json /home/coder/.local/share/code-server/User/keybindings.json
+```
+These keybinds will be User-level.
+> NOTE: You can of course, always add more tasks and keybinds to these files. They don't just need to be related to rclone.
+
+3 (Optional). Creating buttons for pushing and pulling from remote in the status bar<br>
+If you have used VSCode tasks before, you may have noticed that the push and pull remote tasks contained some metadata in the options property. This data is used by the [tasks extension](https://marketplace.visualstudio.com/items?itemName=actboy168.tasks) to display buttons in the status bar that you can click to run the tasks. How convinient!. You can install the extension each time the container gets rebuilt or by adding a line in entrypoint.sh as explained [here](#installing-extensions); the extension id is `actboy168.tasks`; take a look at the extension's readme to see how to configure it.
+![Status bar task buttons](/img/vscode-status-bar-task-buttons.png)
