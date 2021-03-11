@@ -28,6 +28,6 @@ Now you can edit entrypoint.sh and change the last line to
 Or you can set the CODE_SERVER_CONFIG environment variable to the path of your configuration file<br>
 For more information about this, see [cdr/code-server/main/docs/FAQ.md](https://github.com/cdr/code-server/blob/main/docs/FAQ.md#how-does-the-config-file-work)
 ___
-### Changing the default vscode settings that get apllied each time the container is rebuilt
+### Changing the default vscode settings that get applied each time the container is rebuilt
 You can simply edit deploy-container/settings.json to your vscode settings. When the container gets rebuilt, they will be copied to the appropriate place and be applied in code-server.<br>
 > NOTE: These settings are applied User-wide
