@@ -51,7 +51,7 @@ You can also use Ctrl+Shift+X to bring it up
 > NOTE: Extensions installed using this method will not persist between container rebuilds
 
 2. Installing using vscode integrated terminal<br>
-You can install extensions by using the built-in terminal in code-server. Use Ctrl+J to bring up the panel and select the terminal tab. Or you can use Ctrl+\`
+You can install extensions by using the built-in terminal in code-server. Use Ctrl+J to bring up the panel and select the terminal tab. Or you can use Ctrl+\`<br>
 The command for installing extensions is:
 ```shell
 code-server --install-extension ms-python.python
@@ -60,3 +60,19 @@ code-server --install-extension ms-python.python --install-extension redhat.vsco
 ```
 > NOTE: Extensions installed using this method will not persist between container rebuilds
 
+3. Installing in entrypoint.sh<br>
+You can add this command before or after the last line in entrypoint.sh to automatically install extensions in between container rebuilds
+```shell
+/usr/bin/entrypoint.sh --install-extension ms-python.python
+# or to install multiple
+/usr/bin/entrypoint.sh --install-extension ms-python.python --install-extension redhat.vscode-yaml
+# alternate method to install multiple
+/usr/bin/entrypoint.sh --install-extension ms-python.python
+/usr/bin/entrypoint.sh --install-extension redhat.vscode-yaml
+```
+#### Installing before vs after launching code-server.<br>
+If you install the extensions before running code-server, then you will need to wait for the installation process to finish before you are able to use code-server. During this time, you will get 502 Bad Gateway.<br>
+<br>
+If you install after running code-server, you will be able to use code-server but will need to refresh to use extensions after they are installed.
+> NOTE: While technically extensions installed using this method will NOT PERSIST bewtween container rebuilds, they will automatically be reinstalled
+> NOTE: These extensions are installed User-wide
