@@ -44,13 +44,13 @@ ___
 > NOTE: not all extensions maybe available in code-server, see [[1]](https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code), [[2]](https://github.com/cdr/code-server/blob/main/docs/FAQ.md#how-can-i-request-a-missing-extension), [[3]](https://github.com/cdr/code-server/blob/main/docs/FAQ.md#how-do-i-configure-the-marketplace-url), and [[4]](https://github.com/cdr/code-server/blob/main/docs/FAQ.md#where-are-extensions-stored) for more info
 
 There are several ways to install extensions
-1. Installing directly in code-server
+1. Installing directly in code-server<br>
 You can install extensions directly from inside code-server using the GUI. The button should be in the activity bar on the left and looks like this
-![Extensions Button](img/vscode-activity-bar-extension-button.png)<br>
+![Extensions Button](/img/vscode-activity-bar-extension-button.png)<br>
 You can also use Ctrl+Shift+X to bring it up
 > NOTE: Extensions installed using this method will not persist between container rebuilds
 
-2. Installing using vscode integrated terminal
+2. Installing using vscode integrated terminal<br>
 You can install extensions by using the built-in terminal in code-server. Use Ctrl+J to bring up the panel and select the terminal tab. Or you can use Ctrl+\`
 The command for installing extensions is:
 ```shell
