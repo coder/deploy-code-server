@@ -75,4 +75,5 @@ If you install the extensions before running code-server, then you will need to 
 <br>
 If you install after running code-server, you will be able to use code-server but will need to refresh to use extensions after they are installed.
 > NOTE: While technically extensions installed using this method will NOT PERSIST bewtween container rebuilds, they will automatically be reinstalled
+<br>
 > NOTE: These extensions are installed User-wide
