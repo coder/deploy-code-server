@@ -12,6 +12,8 @@ A collection of one-click buttons and scripts for deploying code-server to vario
 | [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Container     | Free, 1 CPU, 1 GB RAM                 | [see guide](https://github.com/bpmct/code-server-azure) |
 | [![Coder](img/logo/coder.png)](https://coder.com/docs)                                                          | Coder             | Dev Workspace | For developer teams 👨🏼‍💻                | [read the docs](https://coder.com/docs)                 |
 
+Extra documentation --> [guides/configuring_environment.md](guides/configuring_environment.md)
+
 ---
 
 ## code-server on a VM vs. a Container
