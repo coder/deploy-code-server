@@ -13,12 +13,12 @@ Docker Hub: `bencdr/code-server-deploy-container`
 
 ## Environment variables:
 
-| Variable Name | Description                                                | Default Value |
-| ------------- | ---------------------------------------------------------- | ------------- |
+| Variable Name | Description                                                | Default Value       |
+| ------------- | ---------------------------------------------------------- | ------------------- |
 | `PASSWORD`    | Password for code-server                                   |
-| `USE_LINK`    | Use code-server --link instead of a password (coming soon) | false         |
-| `GIT_REPO`    | A git repository to clone                                  |               |
-
+| `USE_LINK`    | Use code-server --link instead of a password (coming soon) | false               |
+| `GIT_REPO`    | A git repository to clone                                  |                     |
+| `START_DIR`   | The directory code-server opens (and clones repos in)      | /home/coder/project |
 ---
 
 ## 💾 Persist your filesystem with `rclone`
@@ -44,7 +44,7 @@ Now, you can add the following the environment variables in the code-server clou
 
 | Environment Variable | Description                                                                                                                                           | Default Value                                | Required |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------- |
-| RCLONE_DATA          | the encoded rclone config you copied in step 3                                                                                                        | n/a                                          | ✅       |
+| RCLONE_DATA          | the encoded rclone config you copied in step 3                                                                                                        | n/a                                          | ✅        |
 | RCLONE_REMOTE_NAME   | the name of the remote you added in step 2.<br />check with `$ rclone listremotes`                                                                    | code-server-remote                           |          |
 | RCLONE_SOURCE        | source directory to sync files in the code-server container                                                                                           | the project directory: `/home/coder/project` |          |
 | RCLONE_DESTINATION   | the path in the remote that rclone syncs to. change this if you have multiple code-server environments, or if you want to better organize your files. | code-server-files                            |          |
