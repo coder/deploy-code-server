@@ -18,6 +18,10 @@ if [[ -z "${RCLONE_DATA}" ]]; then
     # start the project
     project_init
 
+    # copy our tasks config to VS Code
+    echo "[$PREFIX] Copying VS Code tasks config"
+    cp /tmp/tasks.json /home/coder/.local/share/code-server/User/tasks.json
+
 else
     echo "[$PREFIX] Copying rclone config..."
     mkdir -p /home/coder/.config/rclone/
