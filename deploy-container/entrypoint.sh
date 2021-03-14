@@ -18,15 +18,15 @@ if [[ -z "${RCLONE_DATA}" ]]; then
     # start the project
     project_init
 
-    # copy our tasks config to VS Code
-    echo "[$PREFIX] Copying VS Code tasks config"
-    cp /tmp/tasks.json /home/coder/.local/share/code-server/User/tasks.json
-
 else
     echo "[$PREFIX] Copying rclone config..."
     mkdir -p /home/coder/.config/rclone/
     touch /home/coder/.config/rclone/rclone.conf
     echo $RCLONE_DATA | base64 -d > /home/coder/.config/rclone/rclone.conf
+
+    # copy our tasks config to VS Code
+    echo "[$PREFIX] Applying VS Code tasks config for rclone"
+    cp /tmp/rclone-tasks.json /home/coder/.local/share/code-server/User/tasks.json
 
     # Full path to the remote filesystem
     RCLONE_REMOTE_PATH=${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files}
