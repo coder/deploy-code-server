@@ -2,17 +2,19 @@
 
 START_DIR="${START_DIR:-/home/coder/project}"
 
+PREFIX="deploy-code-server"
+
 mkdir -p $START_DIR
 
 # add rclone config and start rclone, if supplied
 if [[ -z "${RCLONE_DATA}" ]]; then
-    echo "[Note] RCLONE_DATA is not specified. Files will not persist"
+    echo "[$PREFIX] RCLONE_DATA is not specified. Files will not persist"
 
     # Clone the git repo, if it exists
-    [ -z "${GIT_REPO}" ] && echo "[Note] No GIT_REPO specified"; || git clone $GIT_REPO $START_DIR
+    [ -z "${GIT_REPO}" ] && echo "[$PREFIX] No GIT_REPO specified" || git clone $GIT_REPO $START_DIR
 
 else
-    echo "Copying rclone config..."
+    echo "[$PREFIX] Copying rclone config..."
     mkdir -p /home/coder/.config/rclone/
     touch /home/coder/.config/rclone/rclone.conf
     echo $RCLONE_DATA | base64 -d > /home/coder/.config/rclone/rclone.conf
@@ -26,12 +28,12 @@ else
 
     if rclone ls $RCLONE_REMOTE_PATH; then
         # grab the files from the remote instead of re-cloning the git repo
-        echo "Pulling existing files from remote..."
+        echo "[$PREFIX] Pulling existing files from remote..."
         /home/coder/pull_remote.sh&
     else
         # we need to clone the git repo and sync
-        echo "Pushing initial files to remote..."
-        [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" && echo "intial file" > $START_DIR/file.txt; git clone $GIT_REPO $START_DIR
+        echo "[$PREFIX] Pushing initial files to remote..."
+        [ -z "${GIT_REPO}" ] && echo "[$PREFIX] No GIT_REPO specified" && echo "Have questions? Join us at https://community.coder.com" > $START_DIR/file.txt; git clone $GIT_REPO $START_DIR
         /home/coder/push_remote.sh&
     fi
 
