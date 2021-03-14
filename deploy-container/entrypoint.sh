@@ -16,7 +16,7 @@ if [[ -z "${RCLONE_DATA}" ]]; then
     echo "[$PREFIX] RCLONE_DATA is not specified. Files will not persist"
 
     # start the project
-    project_init()
+    project_init
 
 else
     echo "[$PREFIX] Copying rclone config..."
@@ -38,7 +38,7 @@ else
     else
         # we need to clone the git repo and sync
         echo "[$PREFIX] Pushing initial files to remote..."
-        project_init()
+        project_init
         /home/coder/push_remote.sh&
     fi
 
