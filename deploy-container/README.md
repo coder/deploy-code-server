@@ -13,12 +13,13 @@ Docker Hub: `bencdr/code-server-deploy-container`
 
 ## Environment variables:
 
-| Variable Name | Description                                                | Default Value       |
-| ------------- | ---------------------------------------------------------- | ------------------- |
-| `PASSWORD`    | Password for code-server                                   |
-| `USE_LINK`    | Use code-server --link instead of a password (coming soon) | false               |
-| `GIT_REPO`    | A git repository to clone                                  |                     |
-| `START_DIR`   | The directory code-server opens (and clones repos in)      | /home/coder/project |
+| Variable Name     | Description                                                                                      | Default Value       |
+| ----------------- | ------------------------------------------------------------------------------------------------ | ------------------- |
+| `PASSWORD`        | Password for code-server                                                                         |                     |
+| `HASHED_PASSWORD` | Overrrides PASSWORD. [SHA-256 hash](https://xorbin.com/tools/sha256-hash-calculator) of password |
+| `USE_LINK`        | Use code-server --link instead of a password (coming soon)                                       | false               |
+| `GIT_REPO`        | A git repository to clone                                                                        |                     |
+| `START_DIR`       | The directory code-server opens (and clones repos in)                                            | /home/coder/project |
 ---
 
 ## 💾 Persist your filesystem with `rclone`
