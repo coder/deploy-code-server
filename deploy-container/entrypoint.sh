@@ -2,12 +2,14 @@
 
 START_DIR="${START_DIR:-/home/coder/project}"
 
+mkdir -p $START_DIR
+
 # add rclone config and start rclone, if supplied
 if [[ -z "${RCLONE_DATA}" ]]; then
-    echo "RCLONE_DATA is not specified. Files will not persist"
+    echo "[Note] RCLONE_DATA is not specified. Files will not persist"
 
     # Clone the git repo, if it exists
-    [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" || git clone $GIT_REPO $START_DIR
+    [ -z "${GIT_REPO}" ] && echo "[Note] No GIT_REPO specified"; || git clone $GIT_REPO $START_DIR
 
 else
     echo "Copying rclone config..."
@@ -29,7 +31,7 @@ else
     else
         # we need to clone the git repo and sync
         echo "Pushing initial files to remote..."
-        [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" && mkdir -p $START_DIR && echo "intial file" > $START_DIR/file.txt; git clone $GIT_REPO $START_DIR
+        [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" && echo "intial file" > $START_DIR/file.txt; git clone $GIT_REPO $START_DIR
         /home/coder/push_remote.sh&
     fi
 
