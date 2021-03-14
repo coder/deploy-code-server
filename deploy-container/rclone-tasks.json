@@ -11,7 +11,7 @@
       "problemMatcher": [],
       "options": {
         "statusbar": {
-          "label": "$(repo-push) push"
+          "label": "$(repo-push) rclone: push"
         }
       }
     },
@@ -25,7 +25,7 @@
       "problemMatcher": [],
       "options": {
         "statusbar": {
-          "label": "$(repo-pull) pull"
+          "label": "$(repo-pull) rclone: pull"
         }
       }
     }
