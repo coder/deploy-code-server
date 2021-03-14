@@ -7,7 +7,7 @@ if [[ -z "${RCLONE_DATA}" ]]; then
     echo "RCLONE_DATA is not specified. Files will not persist"
 
     # Clone the git repo, if it exists
-    [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified"; git clone $GIT_REPO $START_DIR
+    [ -z "${GIT_REPO}" ] && echo "No GIT_REPO specified" || git clone $GIT_REPO $START_DIR
 
 else
     echo "Copying rclone config..."
