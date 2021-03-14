@@ -24,9 +24,21 @@ else
     touch /home/coder/.config/rclone/rclone.conf
     echo $RCLONE_DATA | base64 -d > /home/coder/.config/rclone/rclone.conf
 
-    # copy our tasks config to VS Code
-    echo "[$PREFIX] Applying VS Code tasks config for rclone"
-    cp /tmp/rclone-tasks.json /home/coder/.local/share/code-server/User/tasks.json
+    # defasult to true
+    RCLONE_VSCODE_TASKS="${RCLONE_VSCODE_TASKS:-true}"
+
+    if [ $RCLONE_VSCODE_TASKS = "true" ]; then
+        # copy our tasks config to VS Code
+        echo "[$PREFIX] Applying VS Code tasks for rclone"
+        cp /tmp/rclone-tasks.json /home/coder/.local/share/code-server/User/tasks.json
+        # install the extension to add to menu bar
+        code-server --install-extension actboy168.tasks&
+    else
+        # user specified they don't want to apply the tasks
+        echo "[$PREFIX] Skipping VS Code tasks for rclone"
+    fi
+
+
 
     # Full path to the remote filesystem
     RCLONE_REMOTE_PATH=${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files}
