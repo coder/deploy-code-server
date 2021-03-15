@@ -26,6 +26,8 @@ else
 
     # defasult to true
     RCLONE_VSCODE_TASKS="${RCLONE_VSCODE_TASKS:-true}"
+    RCLONE_AUTO_PUSH="${RCLONE_AUTO_PUSH:-true}"
+    RCLONE_AUTO_PULL="${RCLONE_AUTO_PULL:-true}"
 
     if [ $RCLONE_VSCODE_TASKS = "true" ]; then
         # copy our tasks config to VS Code
@@ -43,19 +45,33 @@ else
     # Full path to the remote filesystem
     RCLONE_REMOTE_PATH=${RCLONE_REMOTE_NAME:-code-server-remote}:${RCLONE_DESTINATION:-code-server-files}
     RCLONE_SOURCE_PATH=${RCLONE_SOURCE:-$START_DIR}
-    echo "rclone sync $RCLONE_SOURCE_PATH $RCLONE_REMOTE_PATH -vv" > /home/coder/push_remote.sh
-    echo "rclone sync $RCLONE_REMOTE_PATH $RCLONE_SOURCE_PATH -vv" > /home/coder/pull_remote.sh
+    echo "rclone sync $RCLONE_SOURCE_PATH $RCLONE_REMOTE_PATH $RCLONE_FLAGS -vv" > /home/coder/push_remote.sh
+    echo "rclone sync $RCLONE_REMOTE_PATH $RCLONE_SOURCE_PATH $RCLONE_FLAGS -vv" > /home/coder/pull_remote.sh
     chmod +x push_remote.sh pull_remote.sh
 
     if rclone ls $RCLONE_REMOTE_PATH; then
-        # grab the files from the remote instead of running project_init()
-        echo "[$PREFIX] Pulling existing files from remote..."
-        /home/coder/pull_remote.sh&
+
+        if [ $RCLONE_AUTO_PULL = "true" ]; then
+            # grab the files from the remote instead of running project_init()
+            echo "[$PREFIX] Pulling existing files from remote..."
+            /home/coder/pull_remote.sh&
+        else
+            # user specified they don't want to apply the tasks
+            echo "[$PREFIX] Auto-pull is disabled"
+        fi
+
     else
-        # we need to clone the git repo and sync
-        echo "[$PREFIX] Pushing initial files to remote..."
-        project_init
-        /home/coder/push_remote.sh&
+
+        if [ $RCLONE_AUTO_PUSH = "true" ]; then
+            # we need to clone the git repo and sync
+            echo "[$PREFIX] Pushing initial files to remote..."
+            project_init
+            /home/coder/push_remote.sh&
+        else
+            # user specified they don't want to apply the tasks
+            echo "[$PREFIX] Auto-push is disabled"
+        fi
+
     fi
 
 fi
