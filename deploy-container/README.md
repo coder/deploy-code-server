@@ -54,7 +54,7 @@ Now, you can add the following the environment variables in the code-server clou
 | RCLONE_VSCODE_TASKS  | import push and pull shortcuts into VS Code ![rclone screenshot from VS Code](../img/rclone-vscode-tasks.png)                                         | true                                         |
 | RCLONE_AUTO_PUSH     | automatically push files on startup if the rclone remote is empty (environment -> rclone remote)                                                      | true                                         |          |
 | RCLONE_AUTO_PULL     | automatically pull files on startup if the rclone remote is not empty (rclone -> environment remote)                                                  | true                                         |          |
-| RCLONE_FLAGS         | additional flags to attach to the push and pull script.<br />type ` $rclone help flags` for a list.                                                          |                                              |          |
+| RCLONE_FLAGS         | additional flags to attach to the push and pull script.<br />type ` $ rclone help flags` for a list.                                                          |                                              |          |
 ```sh
 
 # --- How to use ---
