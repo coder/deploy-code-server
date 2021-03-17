@@ -4,8 +4,8 @@ An container image built for deploying code-server.
 
 ## Guides:
 
-- [Deploy on Railway](guides/railway.md)
-- [Deploy on Heroku](guides/heroku.md)
+- [Deploy on Railway](https://github.com/cdr/deploy-code-server/blob/main/guides/railway.md)
+- [Deploy on Heroku](https://github.com/cdr/deploy-code-server/blob/main/guides/heroku.md)
 
 Docker Hub: `bencdr/code-server-deploy-container`
 
