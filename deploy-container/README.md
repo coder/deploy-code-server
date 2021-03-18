@@ -2,14 +2,14 @@
 
 An container image built for deploying code-server.
 
-## Guides:
+## Guides
 
-- [Deploy on Railway](guides/railway.md)
-- [Deploy on Heroku](guides/heroku.md)
+- [Deploy on Railway](../guides/railway.md)
+- [Deploy on Heroku](../guides/heroku.md)
 
 Docker Hub: `bencdr/code-server-deploy-container`
 
-## Modifying your code-server environment:
+## Modifying your code-server environment
 
 We've included some examples on how to add additoonal dependencies in the root-level [Dockerfile](../Dockerfile):
 
@@ -27,7 +27,7 @@ COPY deploy-container/myTool /home/coder/myTool
 
 ---
 
-## Environment variables:
+## Environment variables
 
 | Variable Name     | Description                                                                                      | Default Value       |
 | ----------------- | ------------------------------------------------------------------------------------------------ | ------------------- |
@@ -70,7 +70,8 @@ Now, you can add the following the environment variables in the code-server clou
 | RCLONE_VSCODE_TASKS  | import push and pull shortcuts into VS Code ![rclone screenshot from VS Code](../img/rclone-vscode-tasks.png)                                         | true                                         |
 | RCLONE_AUTO_PUSH     | automatically push files on startup if the rclone remote is empty (environment -> rclone remote)                                                      | true                                         |          |
 | RCLONE_AUTO_PULL     | automatically pull files on startup if the rclone remote is not empty (rclone -> environment remote)                                                  | true                                         |          |
-| RCLONE_FLAGS         | additional flags to attach to the push and pull script.<br />type ` $ rclone help flags` for a list.                                                          |                                              |          |
+| RCLONE_FLAGS         | additional flags to attach to the push and pull script.<br />type `$ rclone help flags` for a list.                                                          |                                              |          |
+
 ```sh
 
 # --- How to use ---
@@ -85,7 +86,7 @@ $ sh /home/coder/pull_remote.sh # get latest files from the remote
 
 ---
 
-## Todo:
+## Todo
 
 - [ ] Make `push_remote` and `pull_remote` commands in path
 - [ ] Impliment file watcher or auto file sync in VS Code
