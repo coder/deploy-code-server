@@ -1,4 +1,4 @@
-# deploying `code-server` on Linode
+# deploying `code-server` on DigitalOcean
 
 [DigitalOcean](https://digitalocean.com) is an developer-friendly platform with cloud servers. Here is the easiest way to launch code-server on Linode:
 
