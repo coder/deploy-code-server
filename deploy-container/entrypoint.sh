@@ -86,7 +86,7 @@ else
     # Symlink if install.sh doesn't exist.
     # If it exits, run it
     if [ -f "/home/coder/dotfiles/install.sh" ]; then
-        echo "[$PREFIX] install.sh exists, running it"
+        echo "[$PREFIX] install.sh exists, running it..."
         /bin/sh /home/coder/dotfiles/install.sh
     else 
         echo "[$PREFIX] install.sh does not exist, symlinking dotfiles..."
