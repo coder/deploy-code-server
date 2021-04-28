@@ -11,6 +11,8 @@ Docker Hub: `bencdr/code-server-deploy-container`
 
 ## Modifying your code-server environment
 
+To update your code-server version, modify the version number on line 2 in your Dockerfile. See the [list of tags](https://hub.docker.com/r/codercom/code-server/tags?page=1&ordering=last_updated) for the latest version.
+
 We've included some examples on how to add additoonal dependencies in the root-level [Dockerfile](../Dockerfile):
 
 ```Dockerfile
