@@ -38,7 +38,6 @@ COPY deploy-container/myTool /home/coder/myTool
 | `USE_LINK` | Use code-server --link instead of a password (coming soon)                                       | false               |
 | `GIT_REPO` | A git repository to clone                                                                        |                     |
 | `START_DIR` | The directory code-server opens (and clones repos in)                                            | /home/coder/project |
-| `DOTFILES_REPO` | GitHub path to a dotfiles repository with your personal configuration across devices. | |
 ---
 
 Other code-server environment variables (such as `CODE_SERVER_CONFIG` ) can also be used. See the [code-server FAQ](https://github.com/cdr/code-server/blob/main/docs/FAQ.md) for details.
@@ -70,12 +69,7 @@ Now, you can add the following the environment variables in the code-server clou
 | RCLONE_REMOTE_NAME   | the name of the remote you added in step 2.<br />check with `$ rclone listremotes` | code-server-remote                           |          |
 | RCLONE_SOURCE        | source directory to sync files in the code-server container                                                                                           | the project directory: `/home/coder/project` |          |
 | RCLONE_DESTINATION   | the path in the remote that rclone syncs to. change this if you have multiple code-server environments, or if you want to better organize your files. | code-server-files                            |          |
-| RCLONE_VSCODE_TASKS  | import push and pull shortcuts into VS Code
-
-![rclone screenshot from VS Code](../img/rclone-vscode-tasks.png)
-
-                                         | true                                         |
-
+| RCLONE_VSCODE_TASKS  | import push and pull shortcuts into VS Code ![rclone screenshot from VS Code](../img/rclone-vscode-tasks.png) | true |
 | RCLONE_AUTO_PUSH     | automatically push files on startup if the rclone remote is empty (environment -> rclone remote)                                                      | true                                         |          |
 | RCLONE_AUTO_PULL     | automatically pull files on startup if the rclone remote is not empty (rclone -> environment remote)                                                  | true                                         |          |
 | RCLONE_FLAGS         | additional flags to attach to the push and pull script.<br />type `$ rclone help flags` for a list.                                                          |                                              |          |
@@ -90,6 +84,14 @@ $ sh /home/coder/pull_remote.sh # get latest files from the remote
 
 # In VS Code:
 # use items in bottom bar or ctrl + P, run task: push_remote or pull_remote or 
+```
+
+### Popular rclone flags
+
+To avoid syncing unnecessary directories, add this to `RCLONE_FLAGS` :
+
+``` none
+--exclude "node_modules/**" --exclude ".git/**"
 ```
 
 ---
