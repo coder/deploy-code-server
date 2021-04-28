@@ -82,6 +82,18 @@ if [[ -z "${DOTFILES_REPO}" ]]; then
 else
     echo "[$PREFIX] DOTFILES_REPO is specified"
     git clone $DOTFILES_REPO /home/coder/dotfiles
+
+    # Symlink if install.sh doesn't exist.
+    # If it exits, run it
+    if [ -f "/home/coder/dotfiles/install.sh" ]; then
+        echo "[$PREFIX] install.sh exists, running it"
+        /bin/sh /home/coder/dotfiles/install.sh
+    else 
+        echo "[$PREFIX] install.sh does not exist, symlinking dotfiles..."
+        ln -sv ~/Projects/dotfiles/* ~/
+    fi
+
+
 fi
 
 echo "[$PREFIX] Starting code-server..."
