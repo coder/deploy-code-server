@@ -90,7 +90,7 @@ else
         /bin/sh /home/coder/dotfiles/install.sh
     else 
         echo "[$PREFIX] install.sh does not exist, symlinking dotfiles..."
-        ln -sv ~/home/coder/dotfiles/ ~/
+        ln -sv ~/ ~/home/coder/dotfiles/*
     fi
 
 
