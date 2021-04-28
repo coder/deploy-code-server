@@ -8,7 +8,7 @@ Use Railway + code-server to get a dev environment that you can access from any 
 
 ## Step 1: Click button to deploy
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https%3A%2F%2Fgithub.com%2Fcdr%2Fdeploy-code-server&envs=PASSWORD%2CGIT_REPO&PASSWORDDesc=Your+password+to+log+in+to+code-server+with&GIT_REPODesc=A+git+repo+to+clone+and+open+in+code-server+%28ex.+https%3A%2F%2Fgithub.com%2Fcdr%2Fdocs.git%29)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new?template=https%3A%2F%2Fgithub.com%2Fcdr%2Fdeploy-code-server%2F&envs=PASSWORD%2CGIT_REPO%2CDOTFILES_REPO&optionalEnvs=GIT_REPO%2CDOTFILES_REPO&PASSWORDDesc=Your+password+to+log+in+to+code-server+with&GIT_REPODesc=A+git+repo+to+clone+and+open+in+code-server+(ex.+https%3A%2F%2Fgithub.com%2Fcdr%2Fdocs.git)&DOTFILES_REPODesc=Environment+configuration+not+related+to+this+specific+environment.+(see+https%3A%2F%2Fdotfiles.github.io%2F))
 
 ## Step 2: Configure & launch your environment
 
@@ -27,7 +27,7 @@ You also need to specity a `PASSWORD` and a `GIT_REPO` to clone in your environm
 1. Open the source repo in GitHub and edit the `Dockerfile`
 1. Add some custom tools (like NodeJS) and push to the main branch:
 
-   ```Dockerfile
+``` Dockerfile
    # You can add custom software and dependencies for your environment here. Some examples:
 
    # RUN code-server --install-extension esbenp.prettier-vscode

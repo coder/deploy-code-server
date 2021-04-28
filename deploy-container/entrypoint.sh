@@ -81,7 +81,7 @@ if [[ -z "${DOTFILES_REPO}" ]]; then
     echo "[$PREFIX] DOTFILES_REPO is not specified"
 else
     echo "[$PREFIX] DOTFILES_REPO is specified"
-    git clone /home/coder/dotfiles $DOTFILES_REPO
+    git clone $DOTFILES_REPO /home/coder/dotfiles
 fi
 
 echo "[$PREFIX] Starting code-server..."
