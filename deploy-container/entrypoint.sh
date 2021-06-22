@@ -77,7 +77,7 @@ else
 fi
 
 # Add dotfiles, if set
-if [ -z "$DOTFILES_REPO" ]; then
+if [ -n "$DOTFILES_REPO" ]; then
     # grab the files from the remote instead of running project_init()
     echo "[$PREFIX] Cloning dotfiles..."
     git clone $GIT_REPO $START_DIR/dotfiles
