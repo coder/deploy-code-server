@@ -76,6 +76,13 @@ else
 
 fi
 
+# Add dotfiles, if set
+if [ -z "$DOTFILES_REPO" ]; then
+    # grab the files from the remote instead of running project_init()
+    echo "[$PREFIX] Cloning dotfiles..."
+    git clone $GIT_REPO $START_DIR/dotfiles
+fi
+
 echo "[$PREFIX] Starting code-server..."
 # Now we can run code-server with the default entrypoint
 /usr/bin/entrypoint.sh --bind-addr 0.0.0.0:8080 $START_DIR
