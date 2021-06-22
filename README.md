@@ -2,15 +2,16 @@
 
 A collection of one-click buttons and scripts for deploying [code-server](https://github.com/cdr/code-server) to various cloud hosting platforms. The fastest way to get a code-server environment! ☁️
 
-|                                                                                                                 | Name              | Type          | Lowest-Price Plan                     | Deploy                                                  |
-| --------------------------------------------------------------------------------------------------------------- | ----------------- | ------------- | ------------------------------------- | ------------------------------------------------------- |
-| [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com)                                          | DigitalOcean      | VM            | $5/mo, 1 CPU, 1 GB RAM                | [see guide](guides/digitalocean.md)                     |
-| [![Vultr](img/logo/vultr.png)](https://vultr.com)                                                               | Vultr             | VM            | $3.50/mo, 1 CPU, 512 MB RAM           | coming soon                                             |
-| [![Linode](img/logo/linode.png)](https://linode.com)                                                            | Linode            | VM            | $5/mo, 1 CPU, 1 GB RAM                | [see guide](guides/linode.md)                           |
+|                                                                                                                 | Name              | Type          | Lowest-Price Plan             | Deploy                                                  |
+| --------------------------------------------------------------------------------------------------------------- | ----------------- | ------------- | ----------------------------- | ------------------------------------------------------- |
+| [![AWS EC2](img/logo/aws-ec2.png)](https://digitalocean.com)                                                    | AWS EC2           | VM            | Free Tier, 1 CPU, 1 GB RAM    | [see guide](guides/aws-ec2.md)                          |
+| [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com)                                          | DigitalOcean      | VM            | $5/mo, 1 CPU, 1 GB RAM        | [see guide](guides/digitalocean.md)                     |
+| [![Vultr](img/logo/vultr.png)](https://vultr.com)                                                               | Vultr             | VM            | $3.50/mo, 1 CPU, 512 MB RAM   | coming soon                                             |
+| [![Linode](img/logo/linode.png)](https://linode.com)                                                            | Linode            | VM            | $5/mo, 1 CPU, 1 GB RAM        | [see guide](guides/linode.md)                           |
 | [![Railway](img/logo/railway.png)](https://railway.app)                                                         | Railway           | Container     | Free, Shared CPU, 1 GB RAM 🚀 | [see guide](guides/railway.md)                          |
-| [![Heroku](img/logo/heroku.png)](https://heroku.com)                                                            | Heroku            | Container     | Free, 1 CPU, 512 MB RAM               | [see guide](guides/heroku.md)                           |
-| [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Container     | Free, 1 CPU, 1 GB RAM                 | [see guide](https://github.com/bpmct/code-server-azure) |
-| [![Coder](img/logo/coder.png)](https://coder.com/docs)                                                          | Coder             | Dev Workspace | For developer teams 👨🏼‍💻                | [read the docs](https://coder.com/docs)                 |
+| [![Heroku](img/logo/heroku.png)](https://heroku.com)                                                            | Heroku            | Container     | Free, 1 CPU, 512 MB RAM       | [see guide](guides/heroku.md)                           |
+| [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Container     | Free, 1 CPU, 1 GB RAM         | [see guide](https://github.com/bpmct/code-server-azure) |
+| [![Coder](img/logo/coder.png)](https://coder.com/docs)                                                          | Coder             | Dev Workspace | For developer teams 👨🏼‍💻        | [read the docs](https://coder.com/docs)                 |
 
 ---
 
