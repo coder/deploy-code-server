@@ -80,6 +80,7 @@ fi
 if [ -n "$DOTFILES_REPO" ]; then
     # grab the files from the remote instead of running project_init()
     echo "[$PREFIX] Cloning dotfiles..."
+    mkdir -p $START_DIR/dotfiles
     git clone $GIT_REPO $START_DIR/dotfiles
 
     # symlink repo
