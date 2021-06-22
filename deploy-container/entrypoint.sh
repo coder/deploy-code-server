@@ -81,6 +81,10 @@ if [ -z "$DOTFILES_REPO" ]; then
     # grab the files from the remote instead of running project_init()
     echo "[$PREFIX] Cloning dotfiles..."
     git clone $GIT_REPO $START_DIR/dotfiles
+
+    # symlink repo
+    shopt -s dotglob
+    ln -s source_file $START_DIR/dotfiles/* ~
 fi
 
 echo "[$PREFIX] Starting code-server..."
