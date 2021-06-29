@@ -4,7 +4,7 @@ A collection of one-click buttons and scripts for deploying [code-server](https:
 
 |                                                                                                                 | Name              | Type          | Lowest-Price Plan             | Deploy                                                  |
 | --------------------------------------------------------------------------------------------------------------- | ----------------- | ------------- | ----------------------------- | ------------------------------------------------------- |
-| [![AWS EC2](img/logo/aws-ec2.png)](https://digitalocean.com)                                                    | AWS EC2           | VM            | Free Tier, 1 CPU, 1 GB RAM    | [see guide](guides/aws-ec2.md)                          |
+| [![AWS EC2](img/logo/aws-ec2.png)](https://aws.amazon.com/ec2)                                                  | AWS EC2           | VM            | Free Tier, 1 CPU, 1 GB RAM    | [see guide](guides/aws-ec2.md)                          |
 | [![DigitalOcean](img/logo/digitalocean.png)](https://digitalocean.com)                                          | DigitalOcean      | VM            | $5/mo, 1 CPU, 1 GB RAM        | [see guide](guides/digitalocean.md)                     |
 | [![Vultr](img/logo/vultr.png)](https://vultr.com)                                                               | Vultr             | VM            | $3.50/mo, 1 CPU, 512 MB RAM   | coming soon                                             |
 | [![Linode](img/logo/linode.png)](https://linode.com)                                                            | Linode            | VM            | $5/mo, 1 CPU, 1 GB RAM        | [see guide](guides/linode.md)                           |
