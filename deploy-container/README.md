@@ -42,13 +42,15 @@ COPY deploy-container/myTool /home/coder/myTool
 
 ## Environment variables
 
-| Variable Name     | Description                                                                                      | Default Value       |
-| ----------------- | ------------------------------------------------------------------------------------------------ | ------------------- |
-| `PASSWORD`        | Password for code-server                                                                         |                     |
-| `HASHED_PASSWORD` | Overrrides PASSWORD. [SHA-256 hash](https://xorbin.com/tools/sha256-hash-calculator) of password |
-| `USE_LINK`        | Use code-server --link instead of a password (coming soon)                                       | false               |
-| `GIT_REPO`        | A git repository to clone                                                                        |                     |
-| `START_DIR`       | The directory code-server opens (and clones repos in)                                            | /home/coder/project |
+| Variable Name      | Description                                                                                        | Default Value       |
+| ------------------ | -------------------------------------------------------------------------------------------------- | ------------------- |
+| `PASSWORD`         | Password for code-server                                                                           |                     |
+| `HASHED_PASSWORD`  | Overrrides PASSWORD. [SHA-256 hash](https://xorbin.com/tools/sha256-hash-calculator) of password   |
+| `USE_LINK`         | Use code-server --link instead of a password (coming soon)                                         | false               |
+| `GIT_REPO`         | A git repository to clone                                                                          |                     |
+| `DOTFILES_REPO`    | A [dotfiles](https://dotfiles.github.io/) repo to save preferences. Runs install.sh, if it exists. |                     |
+| `DOTFILES_SYMLINK` | Symlinks dotfiles repo to $HOME, if exits.                                                         | true                |
+| `START_DIR`        | The directory code-server opens (and clones repos in)                                              | /home/coder/project |
 
 ---
 
