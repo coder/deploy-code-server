@@ -11,7 +11,7 @@ Docker Hub: `bencdr/code-server-deploy-container`
 
 To run the container locally, you can use:
 
-```
+```console
 docker run -p 127.0.0.1:8080:8080 \
   -v "$PWD/project:/home/coder/project" \
   -u "$(id -u):$(id -g)" \
