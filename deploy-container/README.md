@@ -9,6 +9,17 @@ An container image built for deploying code-server.
 
 Docker Hub: `bencdr/code-server-deploy-container`
 
+To run the container locally, you can use:
+
+```console
+docker run -p 127.0.0.1:8080:8080 \
+  -v "$PWD/project:/home/coder/project" \
+  -u "$(id -u):$(id -g)" \
+  -e "DOCKER_USER=$USER" \
+  -e "PASSWORD=12345" \
+  -it bencdr/code-server-deploy-container:latest
+```
+
 ## Modifying your code-server environment
 
 To update your code-server version, modify the version number on line 2 in your Dockerfile. See the [list of tags](https://hub.docker.com/r/codercom/code-server/tags?page=1&ordering=last_updated) for the latest version.
