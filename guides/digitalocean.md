@@ -11,3 +11,5 @@
 1. Once your server starts, you can simply navigate to the IP address and get forwarded to a secure version of code-server, which will be proxied behind your GitHub account. For information on how this works, see [code-server --link](https://github.com/cdr/code-server#cloud-program-%EF%B8%8F).
 
    <img src="../img/digitalocean-launch-code-server.gif" alt="DigitalOcean launch code-server" width="800" />
+
+See our [troubleshooting guide](../deploy-vm#troubleshooting) if you are unable to connect after some time.
