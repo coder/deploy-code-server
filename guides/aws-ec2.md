@@ -28,3 +28,5 @@
 sudo hostnamectl set-hostname bens-devbox
 sudo systemctl restart code-server@coder
 ```
+
+See our [troubleshooting guide](../deploy-vm#troubleshooting) if you are unable to connect after some time.
