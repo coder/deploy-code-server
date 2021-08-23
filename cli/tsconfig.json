@@ -10,7 +10,7 @@
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
     },
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "include": ["src/**/*"]
 }
