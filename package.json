@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "cli:format": "prettier --write ./cli",
+    "cli:format": "prettier --config ./cli/.prettierrc --ignore-path ./cli/.prettierignore --write ./cli",
     "prepare": "husky install"
   },
   "devDependencies": {
