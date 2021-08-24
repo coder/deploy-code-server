@@ -1,5 +1,5 @@
 {
-  "name": "cli",
+  "name": "deploy-code-server",
   "version": "0.1.0",
   "repository": "cdr/deploy-code-server",
   "homepage": "https://github.com/cdr/deploy-code-server",
