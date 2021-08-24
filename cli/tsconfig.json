@@ -10,7 +10,8 @@
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
     },
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*"]
 }
