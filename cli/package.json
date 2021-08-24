@@ -1,5 +1,5 @@
 {
-  "name": "deploy-code-server",
+  "name": "@coder/deploy-code-server",
   "version": "0.1.0",
   "repository": "cdr/deploy-code-server",
   "homepage": "https://github.com/cdr/deploy-code-server",
@@ -11,8 +11,11 @@
     "build:watch": "tsc -w",
     "prepare": "yarn build"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["code-server", "coder"],
+  "author": "coder",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/inquirer": "^7.3.3",
