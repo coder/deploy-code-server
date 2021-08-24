@@ -5,9 +5,7 @@ import { deployDigitalOcean } from "./deploys/deployDigitalOcean";
 import packageJson from "../package.json";
 
 const main = async () => {
-  program
-    .version(packageJson.version)
-    .description("deploy code-server to Digital Ocean");
+  program.version(packageJson.version).description(packageJson.description);
   program.parse();
   await deployDigitalOcean();
   process.exit(0);
