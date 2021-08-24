@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "cli:format": "prettier --config ./cli/.prettierrc --ignore-path ./cli/.prettierignore --write ./cli",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": ">=6",
+    "lint-staged": ">=10",
+    "prettier": "^2.3.2"
+  },
+  "lint-staged": {
+    "./cli/*.{js,css,md}": "yarn cli:format"
+  }
+}
