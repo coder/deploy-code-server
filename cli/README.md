@@ -15,5 +15,5 @@ npm install && npm run build:watch
 
 # in another session:
 cd deploy-code-server/cli
-node bin/index.js
+node bin/src/index.js
 ```
