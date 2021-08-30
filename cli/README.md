@@ -4,7 +4,9 @@ Provision a code-server instance from your terminal.
 
 ## Instructions
 
-npm package coming soon
+```sh
+npx @coder/deploy-code-server
+```
 
 ## Development
 
