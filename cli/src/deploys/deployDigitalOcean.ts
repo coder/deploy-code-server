@@ -91,8 +91,14 @@ export const deployDigitalOcean = async () => {
   let spinner: ora.Ora;
 
   console.log(
+    chalk.yellow(
+      "Using provider: DigitalOcean",
+    )
+  );
+
+  console.log(
     chalk.blue(
-      "You can create a token on",
+      "Don't have a token? Create one at",
       chalk.bold("https://cloud.digitalocean.com/account/api/tokens")
     )
   );
