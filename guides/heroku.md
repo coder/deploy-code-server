@@ -8,7 +8,7 @@ Launch code-server on Heroku to get on-demand dev environments that turn off whe
 
 ## Step 1: Click to deploy
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/cdr/deploy-code-server/tree/main)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/cdr/deploy-code-server)
 
 ---
 
