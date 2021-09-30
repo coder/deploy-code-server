@@ -20,7 +20,12 @@ You also need to specity a `PASSWORD` and a `GIT_REPO` to clone in your environm
 
 ## Step 3: Modify your environment to add additional tools
 
-1. Open your code server app
-1. Type `sudo -i`
+1. Open your code server app and open Terminal
+2. Type `sudo -i` for get root permission
+3. You can modify your environment to add additional tools like you're using VPS
+
+![image.png](https://i.loli.net/2021/09/30/41NQAlSOvKWXair.png)
+
+# WARN: Don't use Railway for mining or do something against their TOS
 
 To update your code-server version, modify the version number on line 2 in your Dockerfile. See the [list of tags](https://hub.docker.com/r/codercom/code-server/tags?page=1&ordering=last_updated) for the latest version.
