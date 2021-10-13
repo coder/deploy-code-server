@@ -24,7 +24,7 @@ else
     touch /home/coder/.config/rclone/rclone.conf
     echo $RCLONE_DATA | base64 -d > /home/coder/.config/rclone/rclone.conf
 
-    # defasult to true
+    # default to true
     RCLONE_VSCODE_TASKS="${RCLONE_VSCODE_TASKS:-true}"
     RCLONE_AUTO_PUSH="${RCLONE_AUTO_PUSH:-true}"
     RCLONE_AUTO_PULL="${RCLONE_AUTO_PULL:-true}"
