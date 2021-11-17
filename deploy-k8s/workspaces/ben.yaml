@@ -1,0 +1,90 @@
+replicaCount: 1
+
+hostnameOverride: "ben-dev"
+
+image:
+  repository: bencdr/dev-env-devops
+  tag: "latest"
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu: 2000m
+    memory: 8000Mi
+  requests:
+    cpu: 500m
+    memory: 1000Mi
+
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 10Gi
+  annotations: {}
+
+extraContainers: |
+  - name: docker-dind
+    image: docker:20.10-dind
+    imagePullPolicy: IfNotPresent
+    resources:
+      requests:
+        cpu: 250m
+        memory: 256M
+    securityContext:
+      privileged: true
+      procMount: Default
+    env:
+      - name: DOCKER_TLS_CERTDIR
+        value: ""
+      - name: DOCKER_DRIVER
+        value: "overlay2"
+
+volumePermissions:
+  enabled: true
+  securityContext:
+    runAsUser: 0
+
+securityContext:
+  enabled: true
+  fsGroup: 1000
+  runAsUser: 1000
+
+service:
+  type: LoadBalancer
+  port: 8080
+
+ingress:
+  enabled: false
+  #annotations:
+  #  kubernetes.io/ingress.class: nginx
+  #  kubernetes.io/tls-acme: "true"
+  #hosts:
+  #  - host: code-server.example.loc
+  #    paths:
+  #      - /
+
+  #tls:
+  #  - secretName: code-server
+  #    hosts:
+  #      - code-server.example.loc
+
+extraArgs: []
+extraVars:
+  - name: DOCKER_HOST
+    value: tcp://localhost:2375
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+extraSecretMounts: []
+
+extraVolumeMounts: []
+
+hostPath: ""
+
+extraConfigmapMounts: []
+
+serviceAccount:
+  create: false

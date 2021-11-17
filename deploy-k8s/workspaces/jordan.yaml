@@ -1,0 +1,70 @@
+replicaCount: 1
+
+hostnameOverride: "jordan-dev"
+
+image:
+  repository: bencdr/dev-env-frontend
+  tag: "latest"
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8000Mi
+  requests:
+    cpu: 1000m
+    memory: 2000Mi
+
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 10Gi
+  annotations: {}
+
+volumePermissions:
+  enabled: true
+  securityContext:
+    runAsUser: 0
+
+securityContext:
+  enabled: true
+  fsGroup: 1000
+  runAsUser: 1000
+
+service:
+  type: LoadBalancer
+  port: 8083
+
+ingress:
+  enabled: false
+  #annotations:
+  #  kubernetes.io/ingress.class: nginx
+  #  kubernetes.io/tls-acme: "true"
+  #hosts:
+  #  - host: code-server.example.loc
+  #    paths:
+  #      - /
+
+  #tls:
+  #  - secretName: code-server
+  #    hosts:
+  #      - code-server.example.loc
+
+extraArgs: []
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+extraSecretMounts: []
+
+extraVolumeMounts: []
+
+hostPath: ""
+
+extraConfigmapMounts: []
+
+serviceAccount:
+  create: false

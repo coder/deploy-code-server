@@ -1,0 +1,31 @@
+replicaCount: 1
+
+hostnameOverride: "skyler-dev"
+
+image:
+  repository: bencdr/dev-env-frontend
+  tag: "latest"
+  pullPolicy: Always
+
+resources:
+  limits:
+    cpu: 4000m
+    memory: 8000Mi
+  requests:
+    cpu: 1000m
+    memory: 2000Mi
+
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 10Gi
+  annotations: {}
+
+volumePermissions:
+  enabled: true
+  securityContext:
+    runAsUser: 0
+
+service:
+  type: LoadBalancer
+  port: 8082
