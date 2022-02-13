@@ -26,7 +26,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 # RUN code-server --install-extension esbenp.prettier-vscode
 
-# Install apt packag
+# Install apt packages:
 # RUN sudo apt-get install -y ubuntu-make
 
 # Copy files: 
