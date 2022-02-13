@@ -1,5 +1,5 @@
 # Start from the code-server Debian base image
-FROM codercom/code-server:3.12.0
+FROM codercom/code-server:4.0.2
 
 USER coder
 
@@ -26,7 +26,7 @@ RUN sudo chown -R coder:coder /home/coder/.local
 # Note: we use a different marketplace than VS Code. See https://github.com/cdr/code-server/blob/main/docs/FAQ.md#differences-compared-to-vs-code
 # RUN code-server --install-extension esbenp.prettier-vscode
 
-# Install apt packages:
+# Install apt packag
 # RUN sudo apt-get install -y ubuntu-make
 
 # Copy files: 
