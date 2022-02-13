@@ -1,5 +1,7 @@
 # deploying `code-server` on AWS EC2
 
+> ⚠️ The deploy script referenced in this guide uses the code-server --link service which is now deprecated. If this solution does not work for you, we recommend following our guide to use [LetsEncrypt with Caddy](https://coder.com/docs/code-server/latest/guide#using-lets-encrypt-with-caddy) to securely connect to code-server on your VM.
+
 ![code-server and AWS EC2](../img/code-server-aws-ec2.png)
 
 [AWS EC2](https://aws.amazon.com/ec2/) is a popular way to manage and launch virtual machines. Here is a fast way to launch a code-server machine with AWS EC2:
