@@ -2,7 +2,7 @@
 
 A simple startup script to run code-server with --link on a VM, designed to run on Ubuntu 20.10.
 
-**Coming soon:** One-click templates in popular marketplaces.
+> ⚠️ The deploy script referenced uses the code-server --link service which is now deprecated. If this solution does not work for you, we recommend following our guide to use [LetsEncrypt with Caddy](https://coder.com/docs/code-server/latest/guide#using-lets-encrypt-with-caddy) to securely connect to code-server on your VM.
 
 ## In this repo
 

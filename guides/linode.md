@@ -1,5 +1,7 @@
 # deploying `code-server` on Linode
 
+> ⚠️ The deploy script referenced in this guide uses the code-server --link service which is now deprecated. If this solution does not work for you, we recommend following our guide to use [LetsEncrypt with Caddy](https://coder.com/docs/code-server/latest/guide#using-lets-encrypt-with-caddy) to securely connect to code-server on your VM.
+
 [Linode](https://linode.com) is a developer-friendly platform with cloud servers. Here is the easiest way to launch code-server on Linode.
 
 1. Log in to Linode and go to the "StackScripts" section in the sidebar
