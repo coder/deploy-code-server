@@ -19,6 +19,6 @@ if ! command -v helm &> /dev/null; then
 fi
 
 if ! command -v jq &> /dev/null; then
-    echo "! Please install the yq command: https://stedolan.github.io/jq/"
+    echo "! Please install the jq command: https://stedolan.github.io/jq/"
     exit
 fi
