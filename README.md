@@ -11,6 +11,7 @@ A collection of one-click buttons and scripts for deploying [code-server](https:
 | [![Railway](img/logo/railway.png)](https://railway.app)                                                         | Railway           | Container     | Free, Shared CPU, 1 GB RAM 🚀 | [see guide](guides/railway.md)                          |
 | [![Heroku](img/logo/heroku.png)](https://heroku.com)                                                            | Heroku            | Container     | Free, 1 CPU, 512 MB RAM       | [see guide](guides/heroku.md)                           |
 | [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Container     | Free, 1 CPU, 1 GB RAM         | [see guide](https://github.com/bpmct/code-server-azure) |
+| [![Oracle Cloud](img/logo/oracle-logo.png)](https://www.oracle.com/cloud/) | Oracle Cloud | Terraform / OCI     | Free Tier Support         | [see guide](https://github.com/oracle-devrel/terraform-oci-code-server) |
 | [![Coder](img/logo/coder.png)](https://coder.com/docs)                                                          | Coder             | Dev Workspace | For developer teams 👨🏼‍💻        | [read the docs](https://coder.com/docs)                 |
 
 ---
