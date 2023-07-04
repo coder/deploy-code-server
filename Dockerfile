@@ -19,6 +19,18 @@ COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 # Fix permissions for code-server
 RUN sudo chown -R coder:coder /home/coder/.local
 
+RUN sudo apt update --fix-missing
+RUN sudo apt install && apt upgrade
+RUN sudo apt install wget curl
+RUN sudo wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+RUN sudo export NVM_DIR="$HOME/.nvm"
+RUN sudo [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+RUN sudo [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+RUN sudo nvm install v18.16.1
+RUN sudo nvm use v18.16.1
+RUN sudo npm install pm2 -g
+RUN sudo npm install -g npm@9.7.2
+
 # You can add custom software and dependencies for your environment below
 # -----------
 
