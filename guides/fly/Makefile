@@ -8,11 +8,11 @@ endif
 FLYCTL_BIN_WHICH=$(shell which $(FLYCTL_BIN_NAME))
 
 # Variables for fly deployment
-FLY_APP_NAME=gedw99-code-server
+FLY_APP_NAME=joeblow-code-server
 FLY_APP_NAME_DB=$(FLY_APP_NAME)-postres
 FLY_APP_REGION=lhr
 
-PG_CONNECTION_URL=DATABASE_URL=postgres://gedw99_code_server:utH7QQvcleHd7Mn@gedw99-code-server-postres.flycast:5432/gedw99_code_server?sslmode=disable
+PG_CONNECTION_URL=DATABASE_URL=postgres://joeblow_code_server:utH7QQvcleHd7Mn@gedw99-code-server-postres.flycast:5432/joeblow_code_server?sslmode=disable
 
 print:
 	@echo ""
