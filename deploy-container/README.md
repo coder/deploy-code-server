@@ -6,6 +6,7 @@ An container image built for deploying code-server.
 
 - [Deploy on Railway](../guides/railway.md)
 - [Deploy on Heroku](../guides/heroku.md)
+- [Deploy on Fly.io](../guides/fly/README.md)
 
 Docker Hub: `bencdr/code-server-deploy-container`
 

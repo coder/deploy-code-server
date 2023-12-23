@@ -14,7 +14,7 @@ FLY_APP_NAME=joeblow-code-server
 FLY_APP_REGION=lhr
 ```
 
-If oyu dont want to use the Makefile, then just do it manaully on a terminal.
+If you dont want to use the Makefile, then just do it on a terminal.
 
 ## Step 0: Install the flyctl tool
 
