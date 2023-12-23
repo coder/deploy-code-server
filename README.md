@@ -13,7 +13,7 @@ A collection of one-click buttons and scripts for deploying [code-server](https:
 | [![Heroku](img/logo/heroku.png)](https://heroku.com)                                                            | Heroku            | Container     | Free, 1 CPU, 512 MB RAM       | [see guide](guides/heroku.md)                           |
 | [![Azure App Service](img/logo/azure-app-service.png)](https://azure.microsoft.com/en-us/services/app-service/) | Azure App Service | Container     | Free, 1 CPU, 1 GB RAM         | [see guide](https://github.com/bpmct/code-server-azure) |
 | [![Oracle Cloud](img/logo/oracle-logo.png)](https://www.oracle.com/cloud/) | Oracle Cloud | Terraform / OCI     | Free Tier Support         | [see guide](https://github.com/oracle-devrel/terraform-oci-code-server) |
-| [![Fly.io](img/logo/fly-logo.png)](https://fly.io/) | Fly.io Cloud | Container    | Free Tier Support         | [see guide](https://fly.io/docs/)
+| [![Fly.io](img/logo/fly-logo.png)](https://fly.io/) | Fly.io Cloud | Container    | Free Tier Support         | [see guide](https://fly.io/docs/about/pricing/#free-allowances)
 
 ---
 
