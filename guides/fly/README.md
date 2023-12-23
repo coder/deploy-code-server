@@ -8,13 +8,13 @@ Fly.io is a platform for deploying applications to the edge. It's a great fit fo
 - A Fly.io account. See: https://fly.io/docs/hands-on/sign-up/
 - flyctl installed on your local machine. See: https://fly.io/docs/hands-on/install-flyctl
 
-There is a Makefile that does all the steps, but first you need to copy the fly-template.toml to fly.toml and then change the variables in the Makefile and fly.toml yourself. For example:
+There is a Makefile that does all the steps, but first you need to copy the fly-template.toml to fly.toml and then change the variables in the Makefile and fly.toml yourself so that they match. For example:
 ```sh
 FLY_APP_NAME=joeblow-code-server
 FLY_APP_REGION=lhr
 ```
 
-If you dont want to use the Makefile, then just do it on a terminal.
+If you dont want to use the Makefile, then you can do all the stpes below using a terminal...
 
 ## Step 0: Install the flyctl tool
 
